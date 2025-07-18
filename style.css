@@ -1,8 +1,10 @@
 header{ 
     display: flex;
- 
+ position: fixed;
     align-items: center;
     width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 3;
 }
 
 body{
@@ -20,26 +22,33 @@ main{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 a{
     text-decoration: none;
     background-color: #ce3700;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 10px;
-    border: 5px solid #ce3700;
+    border: 3px solid #ce3700;
    margin-right: 12px;
 }
 
-h1{
-    color: #ce3700;
-    margin-right: 75%;
-    margin-left: 100px;
-    
+a:hover{
+    background-color: rgba(127, 255, 212, 0);
+    color: rgb(255, 47, 0);
+    border: 2px solid;
+    transition: all 0.5s;
+
 }
-header a:hover{
-    color: #c4907e;
+
+h1{
+   font-size: 28px;
+    color: #ce3700;
+    margin-right: 30%;
+    margin-left: 320px;
+    
 }
 
 h2{
@@ -52,6 +61,8 @@ p{
 }
 .foto{
     border-radius: 50%;
+    height: 250px;
+    margin-top: 100px;
 }
 
 .foto2{
@@ -93,3 +104,16 @@ button{
     background-color: #ce3700;
     color: white;
 }
+
+.nosoytonto{
+    display: flex;
+}
+
+.imagenes:has(img:hover) img:not(:hover){
+    opacity: 0.5;
+}
+
+img{
+    transition: all 0.5s;
+}
+
